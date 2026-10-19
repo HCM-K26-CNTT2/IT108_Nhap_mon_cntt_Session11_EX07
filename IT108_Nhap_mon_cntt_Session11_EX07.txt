@@ -1,0 +1,18 @@
+﻿Bài 7: Gỡ Lỗi Tài Liệu Kế Hoạch Hội Nghị Khoa Học Sinh Viên 
+Phần 1: phân tích lỗi
+1. Tại sao định dạng thủ công khiến Auto TOC không hoạt động?
+* Vì định dạng thủ công không có dán heading nên không thể khiến Auto TOC hoạt động.
+Giải thích cơ chế hoạt động của tính năng quét tiêu đề.
+* Là nó sẽ quét những văn bản được dán heading 1,2,3 lên mục lục, sẽ cho heading 1 lên trước xong 2,3 sẽ nằm nhỏ ở phía dưới heading 1
+
+
+2. Tại sao nhầm lẫn giữa H2 và H3 làm mục lục sai lệch về mặt thụt đầu dòng ?
+* Trong thứ tự phân cấp của Table of contents:
+* Heading 1: nằm sát lề bên trái và không thụt lề.
+* Heading 2: sẽ tự động thụt vào một khoảng so với heading 1.
+* Heading 3: sẽ thụt sâu hơn vào trong so với heading 2.
+* Nếu gán nhầm H3 thành H2: Dòng ‘2.1.1’ sẽ bị đẩy ngang hàng với mục cha ‘2.1. Ban Nội dung’, làm sai  thứ bậc, khiến người đọc hiểu nhầm đây cũng là mục cha.
+* Nếu gán nhầm ngược lại H2 thành H3: mục lớn sẽ bị thụt lùi sâu vào trong bất hợp lý, làm logic và tính mạch lạc của tài lệu này ko hợp lí.
+Phần 2: sửa lỗi & nghiệm thu
+     4.    Khi nội dung đẩy mục ‘3. Lịch trình sự kiện’ từ trang 2 sang trang 4, nếu không thao tác thêm thì mục lục có tự đổi không?
+* Không vì: Auto Table of content là tạo thư mục tự động nó không tự động nhảy số trang th khi gõ hay chèn thêm nội dung mới, nên mục lục vẫn sẽ hiển thị số trang cũ là trang 2.
